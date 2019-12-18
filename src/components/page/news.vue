@@ -17,7 +17,7 @@
         </p>
       </li>
     </ul>
-    <foot/>
+    <!-- <foot/> -->
   </div>
 </template>
 

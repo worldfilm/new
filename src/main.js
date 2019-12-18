@@ -4,6 +4,7 @@ import router from './js/router'
 import store from './js/vuex'
 import tool from './js/tool'
 import config from './js/config'
+import './assets/fonts/iconfont.css'
 window.all={};
 all.store=store;
 all.router=router;

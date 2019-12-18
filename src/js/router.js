@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import main from '@/components/page/main.vue'//主页
 import Home from '@/components/page/home.vue'//主页
 import User from '@/components/page/user.vue'//个人中心
 import Login from '@/components/page/login.vue'//登录
@@ -23,8 +24,8 @@ import About from '@/components/page/about.vue'//版本信息
 import Promot from '@/components/page/promot.vue'//推广中心
 import Online from '@/components/page/online.vue'//在线客服
 import Team from '@/components/page/team.vue'//团队管理
-import TeamReport from '@/components/page/teamReport.vue'//团队报表    
-import Income from '@/components/page/income.vue'//团队报表   
+import TeamReport from '@/components/page/teamReport.vue'//团队报表
+import Income from '@/components/page/income.vue'//团队报表
 
 const originalPush = Router.prototype.push
 Router.prototype.push = function push(location) {
@@ -37,7 +38,8 @@ const router = new Router({
   mode: 'history',
   linkActiveClass: 'active',
   routes: [
-    { path: '/', component: Home, meta: { title: '首页' }, },
+    { path: '/', component: main, meta: { title: '首页' }, },
+    { path: '/main', meta: { title: '首页' }, component: main },
     { path: '/home', meta: { title: '首页' }, component: Home },
     { path: '/user', meta: { title: '个人中心' }, component: User },
     { path: '/recharge', meta: { title: '充值' }, component: Recharge },

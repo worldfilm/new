@@ -37,7 +37,7 @@ export default {
 .header-bar {
   position: fixed;
   top: 0;
-  left: 0;
+  /* left: 0; */
   width: 100%;
   height: 0.8rem;
   line-height: 0.8rem;

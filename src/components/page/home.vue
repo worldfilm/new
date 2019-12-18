@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" :style="'transform: translate('+x+'px,' +y+'px)'">
     <swiper />
     <div class="marquee_content">
       <div class="icon_left">
@@ -48,7 +48,6 @@
         </li>
       </ul>
     </div>
-    <foot/>
   </div>
 </template>
 
@@ -130,14 +129,17 @@ export default {
         { src: gxks, type: 1 },
         { src: mrpy, type: 2 },
         { src: jsys, type: 1 }
-      ]
+      ],
+      x:0,
+      y:0,
     };
   }
 };
 </script>
 <style  scoped>
 .home {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
+      /* transform: translate(0px, 0px) translateZ(0px); */
 }
 .editgame_ul {
   padding: 0 0.2rem 0 0.65rem;

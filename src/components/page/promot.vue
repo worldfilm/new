@@ -85,7 +85,7 @@
         </div>
       </div>
     </div>
-    <foot/>
+    <!-- <foot/> -->
   </div>
 </template>
 
@@ -267,7 +267,7 @@ export default {
 .header-bar {
   position: relative;
   top: 0;
-  left: 0;
+  /* left: 0; */
   width: 100%;
   height: 0.8rem;
   line-height: 0.8rem;

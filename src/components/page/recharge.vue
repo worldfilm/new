@@ -24,7 +24,7 @@
         </div>
       </li>
     </ul>
-    <foot/>
+    <!-- <foot/> -->
   </div>
 </template>
 
@@ -99,7 +99,7 @@ export default {
 .recharge {
   width: 100%;
   font-size: 0.25rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 .title {
   font-style: italic;

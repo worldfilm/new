@@ -1,9 +1,13 @@
 <template>
   <div id="app">
     <keep-alive>
+      <!-- <touch> -->
       <router-view v-if="$route.meta.keepAlive"></router-view>
+    <!-- </touch> -->
     </keep-alive>
+    <!-- <touch> -->
     <router-view v-if="!$route.meta.keepAlive"></router-view>
+    <!-- </touch> -->
   </div>
 </template>
 
@@ -14,7 +18,7 @@ export default {
   name: "App",
   components: {
     foot,
-    heard
+    heard,
   },
   data() {
     return {}
@@ -30,9 +34,10 @@ export default {
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+      /* padding-top: 1rem; */
+  /* font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
 }
 .container {
   position: absolute;
@@ -42,7 +47,7 @@ export default {
   font-size: 0.2rem;
 }
 #app * {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 .disabled {
   color: #aaa !important;

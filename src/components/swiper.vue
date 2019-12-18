@@ -27,14 +27,14 @@ export default {
     }
   },
   mounted() {
-    var mySwiper = new Swiper('.swiper-container', {
-      scrollbar: '.swiper-scrollbar',
-      autoplay: {
-        disableOnInteraction: false,
-      },
-      // slidesPerView: 'auto',
-      loop:true ,
-    })
+    // var mySwiper = new Swiper('.swiper-container', {
+    //   scrollbar: '.swiper-scrollbar',
+    //   autoplay: {
+    //     disableOnInteraction: false,
+    //   },
+    //   // slidesPerView: 'auto',
+    //   loop:true ,
+    // })
   },
 }
 </script>

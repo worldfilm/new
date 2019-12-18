@@ -1,10 +1,11 @@
 <template>
   <div class="footer">
     <div class="link" v-for="(item,index) in list" @click="footClick(item,index)" :key="index">
-      <div :class="['link_img',item.class]">
-        <img :src="item.imgSrc2" :class="['link_img',item.class2,item.color]" />
+      <div :class="item.class">
+        <!-- <img :src="item.imgSrc2" :class="['link_img',item.class2,item.color]" /> -->
+        <!-- <span :class="item.class"></span> -->
       </div>
-      <div :class="['link_text',item.class3]">
+      <div class="link_text">
         <span v-text="item.name" :class="item.color"></span>
       </div>
     </div>
@@ -12,16 +13,6 @@
 </template>
 
 <script>
-import footer_h from "../assets/img/public/footer_h.png";
-import footer_t from "../assets/img/public/footer_t.png";
-import footer_a from "../assets/img/public/footer_a.png";
-import footer_p from "../assets/img/public/footer_p.png";
-import footer_n from "../assets/img/public/footer_n.png";
-import foot_h from "../assets/img/public/foot_h.png";
-import foot_t from "../assets/img/public/foot_t.png";
-import foot_a from "../assets/img/public/foot_a.png";
-import foot_p from "../assets/img/public/foot_p.png";
-import foot_n from "../assets/img/public/foot_n.png";
 export default {
   data() {
     return {
@@ -30,53 +21,28 @@ export default {
       list: [
         {
           name: "首页",
-          imgSrc: footer_h,
           link: "/home",
-          class: "",
-          class2: "",
-          class3: "",
-          color:'',
-          imgSrc2:footer_h
+          class: "iconfont icon-zhuye",
         },
         {
           name: "推广",
-          imgSrc: footer_t,
           link: "/promot",
-          class: "",
-          class2: "",
-          class3: "",
-          color:'pocity',
-          imgSrc2:foot_t
+          class: "iconfont icon-telegram",
         },
         {
           name: "充值",
-          imgSrc: footer_a,
           link: "/recharge",
-          class: "jia",
-          class2: "img_jia",
-          class3: "txt",
-          color:'blue',
-          imgSrc2:foot_a
+          class: "iconfont icon-jia jia",
         },
         {
           name: "个人",
-          imgSrc: footer_p,
           link: "/user",
-          class: "",
-          class2: "",
-          class3: "",
-          color:'pocity',
-          imgSrc2:foot_p
+          class: "iconfont icon-geren_",
         },
         {
           name: "消息",
-          imgSrc: footer_n,
           link: "/news",
-          class: "",
-          class2: "",
-          class3: "",
-          color:'pocity',
-          imgSrc2:foot_n
+          class: "iconfont icon-tongzhi",
         }
       ]
     };
@@ -107,7 +73,7 @@ export default {
   display: flex;
   width: 100%;
   height: 0.9rem;
-  background: url(../assets/img/public/footer_bg.png);
+  background: url(/img/footer_bg.png);
   background-repeat: no-repeat;
   position: fixed;
   bottom: 0;
@@ -115,6 +81,8 @@ export default {
   z-index: 10;
   background-size: 100% auto;
 }
+.iconfont{font-size: 0.4rem;}
+
 .blue{color: #2fa6b4;}
 .link {
   font-size: 0.2rem;
@@ -122,9 +90,11 @@ export default {
   width: 25%;
   text-align: center;
   padding-top: 0.1rem;
+  color: #e65854;
 }
 .link_text {
   color: #ce616b;
+  font-size: 0.25rem;
 }
 .txt {
   position: relative;
@@ -145,20 +115,22 @@ img {
   height: 0.5rem;
   width: 0.5rem;
 }
+/* .icon-jia:before{transform: rotate(45deg);} */
 .jia {
-  width: 0.9rem;
-  height: 0.9rem;
+  /* width: 0.9rem; */
+  height: 0.45rem;
   position: relative;
-  transform: rotate(45deg);
-  bottom: 0.4rem;
+  /* transform: rotate(45deg); */
+  bottom: 0.6rem;
   display: inline-block;
-  background: #f5eae2;
+  /* background: #f5eae2; */
+  font-size: 1rem;
 }
-.img_jia {
+/* .img_jia {
   width: 100%;
   height: 100%;
   transform: rotate(45deg);
-}
+} */
 .pocity{opacity: 0.8;}
 .deep{opacity: 1;}
 .light_blue{opacity: 0.8;color: #2fa6b4;}
